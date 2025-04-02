@@ -1,0 +1,66 @@
+.scrolling-banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    --duration: 30s;
+    --banner-height: 50px;
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+  }
+  
+  .banner-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .banner-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .banner-item-text {
+    padding: 0 30px;
+  }
+  
+  .banner-item-logo {
+    padding: 0 15px;
+  }
+  
+  .banner-item-combined {
+    padding: 0 20px;
+  }
+  
+  .banner-logo {
+    height: calc(var(--banner-height) * 0.6);
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  .banner-text {
+    font-size: calc(var(--banner-height) * 0.35);
+    font-weight: 500;
+  }
+  
+  .banner-item a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .scrolling-banner.animate .banner-content {
+    animation: scroll var(--duration) linear infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
